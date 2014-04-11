@@ -2,7 +2,7 @@
   "builders": [
     {
       "type": "virtualbox-iso",
-      "vm_name": "debian7.4",
+      "vm_name": "vagrant-debian-wheezy",
       "guest_os_type": "Debian_64",
       "disk_size": 32000,
       "iso_url": "http://cdimage.debian.org/debian-cd/7.4.0/amd64/iso-cd/debian-7.4.0-amd64-netinst.iso",
