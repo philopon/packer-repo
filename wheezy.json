@@ -1,8 +1,11 @@
 {
+  "variables": {
+    "host_name": "vagrant-debian-wheezy"
+  },
   "builders": [
     {
       "type": "virtualbox-iso",
-      "vm_name": "vagrant-debian-wheezy",
+      "vm_name": "{{user `host_name`}}",
       "guest_os_type": "Debian_64",
       "disk_size": 32000,
       "iso_url": "http://cdimage.debian.org/debian-cd/7.4.0/amd64/iso-cd/debian-7.4.0-amd64-netinst.iso",
@@ -42,7 +45,7 @@
   "post-processors": [
     {
       "type": "vagrant",
-      "output": "debian7.4.box"
+      "output": "output/{{user `host_name` }}.box"
     }
   ]
 }
